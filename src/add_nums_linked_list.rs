@@ -1,4 +1,4 @@
-/*
+
 use std::collections::{LinkedList};
 
 
@@ -18,4 +18,4 @@ pub fn main() {
     }
     println!("{:?}", ans)
 }
-*/
+
