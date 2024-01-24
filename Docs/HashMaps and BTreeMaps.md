@@ -185,7 +185,12 @@ let suffix = "ay";
 }
 ```
 
-Using a hash map and vectors, create a text interface to allow a user to add employee names to a department in a company. For example, “Add Sally to Engineering” or “Add Amir to Sales.” Then let the user retrieve a list of all people in a department or all people in the company by department, sorted alphabetically.
+Using a hash map and vectors, create a text interface to allow a user to add employee names to a 
+department in a company. For example, “Add Sally to Engineering” or “Add Amir to Sales.” 
+Then let the user retrieve a list of all people in a department or all people in the company by 
+department, sorted alphabetically.
+
+
 ```Rust
 /*
 - Using a hash map and vectors, create a text interface to allow a user to add employee names  
@@ -253,7 +258,6 @@ Using a hash map and vectors, create a text interface to allow a user to add emp
   }  
   }  
   }
-  
 ```
 
 ## BTreeMaps
@@ -398,9 +402,12 @@ let mut root = PrettyTreeNode::new(10);
   
     PrettyTreeNode::print_tree(&root, "".to_string(), false);  
 }
+```
+
 BTreeMap in Rust
 The following is an example implementation of BTreeMap:
 
+```Rust
 use std::collections::BTreeMap;
 
 pub fn main() {  
