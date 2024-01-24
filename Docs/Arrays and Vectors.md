@@ -6,7 +6,7 @@ Arrays are data structures of a fixed size, they can be one, two, or multi(n)-di
 
 Arrays are great when manipulating data of fixed dimensions.
 
-They're stored in contiguous memory, and take the form [T, (length)
+They're stored in contiguous memory, and take the form `[T, length]`
 
 ## Vectors
 
