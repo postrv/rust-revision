@@ -17,10 +17,11 @@ Keywords for strings:
 - `str` - fixed length, immutable string type - usually seen as:
 - `&str` - fixed length immutable string with borrowed value
 
-Useful to handle ownership:
+### Useful to handle ownership:
+- `.to_owned()` - this allows you to change the ownership of a value in memory such that you can perform write operations
+- `.clone()` - this allows you to copy the value in memory such that the new copy can be mutated without interfering with the original value, with a different owner
 
-`.to_owned()` - this allows you to change the ownership of a value in memory such that you can perform write operations
-`.clone()` - this allows you to copy the value in memory such that the new copy can be mutated without interfering with the original value, with a different owner
+More on Ownership, Borrowing and Lifetimes in the Memory Management section.
 
 ## Slices
 To take a slice of a String, str or &str, one can use the following:
