@@ -16,4 +16,4 @@ allocate memory for them.
 
 ## Ndarray
 
-The ndarray crate provides support for n-dimensional arrays, which have particular utility in machine learning.
+The `ndarray` crate provides support for n-dimensional arrays, which have particular utility in machine learning.
