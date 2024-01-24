@@ -63,8 +63,11 @@ To update an existing value in a HashMap, we can simply insert a new value for t
 ```Rust
 scores.insert(String::from("Blue"), 10); // Setting original value
 scores.insert(String::from("Blue"), 25)l // Setting a new value for the same key
-The entry keyword in combination with or_insert() method can be used to add a key and value only if they don't already exist:
+```
 
+The entry keyword in combination with `or_insert()` method can be used to add a key and value only if they don't already exist:
+
+```Rust
 use std::collections::HashMap;
 
 let mut scores = HashMap::new();
@@ -91,17 +94,18 @@ let count = map.entry(word).or_insert(0); // Enters the key value pair {word: co
 *count += 1; // dereferenced value `count` is incremented each time the same word comes up
 }
 println!("{:?}", map); // the resulting {word: count} key value pairs are printed
-the output of this would look like this:
+```
 
-{"hello": 1, "world": 2, "wonderful": 1}
+The output of this would look like this:
+
+`{"hello": 1, "world": 2, "wonderful": 1}`
+
+
 Exercises to program:
 
 Given a list of integers, use a vector and return the median (when sorted, the value in the middle position) and mode (the value that occurs most often; a hash map will be helpful here) of the list.
-/*
-- Given a list of integers, use a vector and return the median(when sorted, the value  
-  in the middle position) and mode  (the value that occurs most often; a hash map will be helpful here) of the list.
-  */  
-  use std::collections::HashMap;
+```Rust
+use std::collections::HashMap;
 
 pub(crate) fn main() {  
 let mut vector_of_integers = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 4, 5, 6, 7, 4, 5, 6, 7, 8, 9, 3, 4, 1];//using vec! macro to create a vector  
