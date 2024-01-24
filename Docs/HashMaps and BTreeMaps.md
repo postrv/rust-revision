@@ -5,27 +5,30 @@ The basic thesis of a HashMap is that it provides an efficient way to store and 
 
 In order to work, there must be a 1:1 relationship/mapping between keys and values, such that one key returns exactly one value.
 
-HashMaps in Rust
+## HashMaps in Rust
+
 The Rust standard library provides the std::collections::HashMap module, which can be used for creating and interacting with HashMaps.
 
 In the below example, we're storing the team name alongside their score. Since the team name is unique - there can only be one score for each team - this is the key, and the score, which could be the same for more than one team, is the value.
+
+
 ```Rust
 use std::collections::HashMap;
 
 let mut scores = HashMap::new(); // This initialises a new empty hashmap data structure
+```
 
-// To insert new key value pairs into the hashmap, the following can be used:
+To insert new key value pairs into the hashmap, the following can be used:
 
+```Rust
 scores.insert(String::from("Blue"), 10); // Adding the Blue team, with a score of 10 points
-
 scores.insert(String::from("Yellow"), 50); // Adding the Yellow team, with a score of 50 points
 ```
 
 In order to retrieve values from the HashMap, we can use the get keyword:
 
 ```Rust
-// Same setup as before to initialise the HashMap and add key value pairs to it
-use std::collections::HashMap;
+use std::collections::HashMap; // Same setup as before to initialise the HashMap and add key value pairs to it
 
 let mut scores = HashMap::new();
 
@@ -53,7 +56,7 @@ scores.insert(String::from("Yellow"), 50);
 // Loop through the HashMap and return the key value pairs:
 
 for (key, value) in &scores { // borrows value from scores variable and loops through each key value pair within it
-println!("{key}: {value}") // prints each key value pair
+    println!("{key}: {value}") // prints each key value pair
 }
 ```
 
@@ -77,7 +80,7 @@ scores.insert(String::from("Blue"), 10); // first value inserted as seen previou
 scores.entry(String::from("Yellow")).or_insert(50); // Second value entered with `entry` keyword if not already present
 scores.entry(String::from("Blue")).or_insert(50); // Will not insert the value 50 because the value 10 is already present for the key "Blue"
 
-println!("{:?}", scores); // uses the ? operator in combinaton with the Debug trait on the underlying struct to print where the number of returned values is not known
+println!("{:?}", scores); // uses the ? operator in combination with the Debug trait on the underlying struct to print where the number of returned values is not known
 ```
 
 If we want to update a value based on the old value (e.g. increment it) we can do the following:
@@ -90,20 +93,23 @@ let text = "hello world wonderful world"; // initialises a new text string
 let mut map = HashMap::new(); // initialises an empty HashMap
 
 for word in text.split_whitespace() { // Splits the text string on whitespace and loops through each substring
-let count = map.entry(word).or_insert(0); // Enters the key value pair {word: count} where
-*count += 1; // dereferenced value `count` is incremented each time the same word comes up
+    let count = map.entry(word).or_insert(0); // Enters the key value pair {word: count} where
+    *count += 1; // de-referenced value `count` is incremented each time the same word comes up
 }
 println!("{:?}", map); // the resulting {word: count} key value pairs are printed
 ```
 
 The output of this would look like this:
 
-`{"hello": 1, "world": 2, "wonderful": 1}`
+```JSON
+{"hello": 1, "world": 2, "wonderful": 1}
+```
 
 
 Exercises to program:
 
 Given a list of integers, use a vector and return the median (when sorted, the value in the middle position) and mode (the value that occurs most often; a hash map will be helpful here) of the list.
+
 ```Rust
 use std::collections::HashMap;
 
