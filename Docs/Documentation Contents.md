@@ -5,11 +5,11 @@ This list addresses the core subject areas and includes additional relevant item
 
 
 1. Data Structures and Algorithms in Rust - Basic Data Structures
-   - [Arrays and Vectors](Docs/Arrays%20and%20Vectors.md)
-   - [Strings and Slices](Docs/Strings%20and%20Slices.md)
-   - [HashMaps and BTreeMaps](Docs/HashMaps%20and%20BTreeMaps.md)
+   - [Arrays and Vectors](Arrays%20and%20Vectors.md)
+   - [Strings and Slices](Strings%20and%20Slices.md)
+   - [HashMaps and BTreeMaps](HashMaps%20and%20BTreeMaps.md)
    - [Stacks, Queues and Dequeue](Stacks%20Queues%20and%20Dequeues.md)
-   - [Linked Lists](Docs/Linked%20Lists.md)
+   - [Linked Lists](Linked%20Lists.md)
 2. Advanced Data Structures
    - [Binary Trees, Binary Search Trees]
    - [Heaps]
